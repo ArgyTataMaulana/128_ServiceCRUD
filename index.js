@@ -17,3 +17,17 @@ const pool = new pg.Pool({
     password: 'Satoru12345',
     port: 5432, 
 })
+
+//GET ALL DATA
+app.get('/', (req, res) => {
+    console.log("TEST DATA :")
+
+    pool.query('SELECT * FROM biodata ORDER BY id')
+        .then((result) => {
+            res.send(result.rows);
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).send('internal server error');
+        });
+});
