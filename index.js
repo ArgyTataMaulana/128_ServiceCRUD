@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 //post (Tambah data)
-app.post('/', (req, res) => {
+app.post('/biodata', (req, res) => {
     const {id, nama, nim, kelas} = req.body;
 
     pool.query(
