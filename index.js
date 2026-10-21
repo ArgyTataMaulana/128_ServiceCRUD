@@ -13,7 +13,7 @@ app.use(
 const pool = new pg.Pool({
     user: 'postgres',
     host: 'localhost',
-    database: 'pertemuan5',
+    database: 'mahasiswa',
     password: 'Satoru12345',
     port: 5432, 
 })
